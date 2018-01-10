@@ -13,11 +13,7 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <%= form_tag("/blogs", method: :get) do %>
-      Search Topics
-    <%= text_field_tag :query %>
-    <%= submit_tag "Search" %>
-  <% end %>
+
 
 
     <%= yield %>

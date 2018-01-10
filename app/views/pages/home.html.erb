@@ -1,0 +1,5 @@
+<%= form_tag("/blogs", method: :get) do %>
+    Search Topics
+  <%= text_field_tag :query %>
+  <%= submit_tag "Search" %>
+<% end %>
