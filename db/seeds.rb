@@ -24,6 +24,7 @@ puts "10 blogs created"
 	User.create!(
 				 email: "asdf#{user}@asdf.com",
 				 password: "asdfasdf",
+				 roles: "user"
 				 # last_name: "lasty",
 				 # first_name: "firsty",
 				 # full_name: last_name + first_name
@@ -31,3 +32,13 @@ puts "10 blogs created"
 end
 
 puts "3 Users created email: asdf[id]@asdf.com, password: asdfasdf"
+
+1.times do |admin|
+	User.create!(
+					  email: "admin@asdf.com",
+				 	  password: "asdfasdf",
+				 	  roles: "admin"
+				)
+end
+
+puts "1 Admin created email: admin@asdf.com, password: asdfasdf"

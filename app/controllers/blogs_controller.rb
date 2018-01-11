@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-access all: [:show, :index], user: {except: [:destroy, :edit]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :edit]}, admin: :all
   # GET /blogs
   # GET /blogs.json
   def index
@@ -10,6 +10,15 @@ access all: [:show, :index], user: {except: [:destroy, :edit]}, admin: :all
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    #if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).find(params[:id])
+      @comment = Comment.new
+
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    #else
+      redirect_to blogs_path, notice: "You are not authorized to access this page"
+    #end
   end
 
   # GET /blogs/new
