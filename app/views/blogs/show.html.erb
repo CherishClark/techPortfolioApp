@@ -25,5 +25,7 @@
   <%= @blog.body %>
 </p>
 
+<%= render 'comments/comment_form' %>
+
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:admin)%> |
 <%= link_to 'Back', blogs_path %>
