@@ -4,7 +4,12 @@ access all: [:show, :index], user: {except: [:destroy, :edit]}, admin: :all
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+
+    @blogs = if params[:query]
+      Blog.where('topic LIKE ?', "%#{params[:query]}%")
+    else
+      @blogs = Blog.all
+    end
   end
 
   # GET /blogs/1
