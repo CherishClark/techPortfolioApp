@@ -15,6 +15,8 @@ access all: [:show, :index], user: {except: [:destroy, :edit]}, admin: :all
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+      @blog = Blog.includes(:comments).find(params[:id])
+      @comment = Comment.new
   end
 
   # GET /blogs/new
