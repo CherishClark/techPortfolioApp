@@ -1,1 +1,132 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Arimo|PT+Sans+Narrow|Titillium+Web:400|Ubuntu:300');
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e ); 
+  
+}
+
+h2 {
+  padding: 20px;
+  font-weight: 700;
+}
+
+#navBar ul {
+
+  list-style-type: none;
+  display:flex;
+  float:right;
+  margin: 0px;
+  padding: 0px;
+}
+
+#navBar li {
+  margin: 20px;
+}
+
+#navBar {
+  display: inline-block;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .09);
+  box-shadow: 0px 2px 4px #272626;
+
+}
+
+#searchbar-container {
+
+  display: flex;
+  justify-content: center;
+  padding: 300px 0 100px 0;
+}
+
+#searchbar-container input {
+
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, .09ß);
+  border-width: 0px 3px 0px 3px;
+  border-color: #ff1a1a;
+  transition: 1s;
+  box-shadow: 0px 3px 4px #000000;
+  color: #c9c8d2;
+}
+
+
+
+
+#searchbar-container input:hover {
+  width: 500px;
+  transition: 1s;
+  outline:none;
+  padding: 20px;
+}
+
+#searchbar-container input:focus, input:active,input:hover, {
+  border-width: 0px 3px 0px 3px;
+  border-color: #ff1a1a;
+  outline:none;
+}
+
+.fa-search:before, button {
+
+  background: transparent;;
+  outline: none;
+  border: none;
+  text-shadow: 0px 3px 4px #131313;
+  color: #c9c8d2;
+}
+#blog-container tr td {
+  padding: 20px 10px;
+}
+
+#blog-container {
+  display:flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.post {
+
+  width: 350px;
+  height: 600px;
+  padding: 20px;
+  margin: 20px;
+
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+
+}
+.card {
+  border:none;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 0px 0.5px 18px #black;
+  transition: 0.75s;
+}
+
+.card p {
+ 
+  overflow: hidden;
+  padding: 10px 20px;
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0.5px 24px #black;
+  transition: 0.75s;
+  margin: 40px;
+
+}

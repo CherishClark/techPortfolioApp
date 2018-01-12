@@ -1,5 +1,12 @@
-<%= form_tag("/blogs", method: :get) do %>
-    Search Topics
-  <%= text_field_tag :query %>
-  <%= submit_tag "Search" %>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<div class="container-fluid" id="searchbar-container">
+<%= form_tag("/blogs", method: :get,)  do %>
+  <%= text_field_tag :query%>
+<%= button_tag do %>
+ <i class="fa fa-search"></i>
 <% end %>
+<% end %>
+
+
+</div>
