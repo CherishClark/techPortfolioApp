@@ -6,6 +6,7 @@
   <% @blogs.each do |blog| %>
     <div class="card post" >
       <%= image_tag 'https://i.pinimg.com/originals/c0/ab/10/c0ab107fac33f51f62a2c1de03d8f262.jpg', id:"image"%>
+      <h2><%= blog.title %></h2>
       <p><%= blog.topic %></p>
       <p><%= blog.body %><p>
       <%= link_to 'Show', blog %>
