@@ -1,34 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Blogs</h1>
+<div class="container-fluid" id="blog-container">
+  <div class="row"> 
+  <% @blogs.each do |blog| %>
+    <div class="card post" >
+      <%= image_tag 'https://i.pinimg.com/originals/c0/ab/10/c0ab107fac33f51f62a2c1de03d8f262.jpg', id:"image"%>
+      <p><%= blog.topic %></p>
+      <p><%= blog.body %><p>
+      <%= link_to 'Show', blog %>
+      <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin)%>
+      <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin)%>
+    </div>
+  <% end %>
+</div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Topic</th>
-      <th>Pic</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.topic %></td>
-        <td><%= blog.pic %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-      
-        <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:admin)%></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:admin)%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+</div>
 
 <%= link_to 'New Blog', new_blog_path %>

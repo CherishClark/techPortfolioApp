@@ -1,1 +1,94 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+
+  background-color:white;
+}
+
+#navBar ul {
+
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#navBar li {
+  margin: 20px;
+}
+
+#navBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .25);
+
+}
+
+#searchbar-container {
+
+  display: flex;
+  justify-content: center;
+  padding: 300px 0 100px 0;
+}
+
+#searchbar-container input {
+
+  width: 500px;
+  height:50px;
+  background-color: black;
+  border:none;
+}
+#blog-container tr td {
+  padding: 20px 10px;
+}
+
+#blog-container {
+  display:flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.post {
+
+  width: 500px;
+  padding: 20px;
+  margin: 20px;
+
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+
+}
+.card {
+  border:none;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 0px 0.5px 18px #848484;
+  transition: 0.75s;
+}
+
+.card p {
+  padding: 20px;
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0.5px 24px #848484;
+  transition: 0.75s;
+  margin: 40px;
+
+}
